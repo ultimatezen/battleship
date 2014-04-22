@@ -7,6 +7,7 @@ var app = koa();
 
 app.use(function *(next) {
     this.res.type = 'application/json';
+    this.body = {};
     yield next;
 });
 
@@ -14,7 +15,7 @@ app.use(routing(app));
 
 
 // Setup apis
-var apiPath = './api';
+var apiPath = './routes';
 var files = fs.readdirSync(apiPath);
 files.forEach(function (file) {
     if (file.indexOf('.swp') === -1) {

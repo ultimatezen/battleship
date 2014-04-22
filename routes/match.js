@@ -5,6 +5,8 @@
  */
 
 
+var match = require('../modules/match');
+
 function setup(app) {
     app.route('/match')
         .get(get)
@@ -13,7 +15,7 @@ function setup(app) {
 
 
 function * get(next) {
-    this.body = { data: 'qwesssome' };
+    this.body.matches = match.getMatches();
     yield next;
 }
 
