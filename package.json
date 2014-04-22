@@ -8,17 +8,21 @@
 		{ "name": "Tien Le", "email": "shonentokyo@gmail.com" }
 	],
 	"license": "MIT",
-	"main": "game",
+	"main": "index.js",
 	"scripts": {
 		"start": "./game start",
 		"stop": "./game stop",
 		"restart": "./game restart"
 	},
 	"engines": {
-		"node": "0.10.26"
+		"node": "0.11.12"
 	},
 	"dependencies": {
-		"async": "0.2.9"
+		"async": "0.2.9",
+        "js-yaml": "3.0.2",
+		"config": "0.4.35",
+        "koa": "0.5.5",
+        "koa-routing": "*"
 	},
 	"devDependencies": {
 		"jshint": "2.3.0",
