@@ -1,0 +1,28 @@
+{
+	"name": "battleship",
+	"description": "battleship backend",
+	"version": "0.0.1",
+	"repository": "git@github.com:ultimatezen/battleship.git",
+	"author": "Tien Le",
+	"maintainers": [
+		{ "name": "Tien Le", "email": "shonentokyo@gmail.com" }
+	],
+	"license": "MIT",
+	"main": "game",
+	"scripts": {
+		"start": "./game start",
+		"stop": "./game stop",
+		"restart": "./game restart"
+	},
+	"engines": {
+		"node": "0.10.26"
+	},
+	"dependencies": {
+		"async": "0.2.9"
+	},
+	"devDependencies": {
+		"jshint": "2.3.0",
+		"mocha": "1.12.1",
+		"should": "3.3.1"
+	}
+}
