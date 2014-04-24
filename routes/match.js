@@ -6,12 +6,6 @@
 
 var match = require('../modules/match');
 
-function setup(app) {
-    app.route('/match')
-        .get(get)
-        .post(post);
-}
-
 
 function * get(next) {
     this.body.matches = match.getMatches();
@@ -26,6 +20,13 @@ function * post(next) {
 }
 
 
-exports.setup = setup;
+function setup(app) {
+    app.route('/match')
+        .get(get)
+        .post(post);
+}
+
+
 exports.get = get;
 exports.post = post;
+exports.setup = setup;
