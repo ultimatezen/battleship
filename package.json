@@ -1,7 +1,7 @@
 {
 	"name": "battleship",
 	"description": "battleship backend",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"repository": "git@github.com:ultimatezen/battleship.git",
 	"author": "Tien Le",
 	"maintainers": [
