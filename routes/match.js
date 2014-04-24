@@ -1,7 +1,6 @@
 /*
  * Match route handlers
  *
- *
  */
 
 
@@ -21,6 +20,8 @@ function * get(next) {
 
 
 function * post(next) {
+    this.body.match  = match.createMatch();
+    this.body.matches = match.getMatches();
     yield next;
 }
 

@@ -22,11 +22,13 @@
         "js-yaml": "3.0.2",
 		"config": "0.4.35",
         "koa": "0.5.5",
-        "koa-routing": "*"
+        "koa-routing": "*",
+        "koa-body": "*"
 	},
 	"devDependencies": {
-		"jshint": "2.3.0",
+		"jshint": "2.5.0",
 		"mocha": "1.12.1",
-		"should": "3.3.1"
+		"should": "3.3.1",
+        "tv4": "1.0.16"
 	}
 }
