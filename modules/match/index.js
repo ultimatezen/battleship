@@ -40,6 +40,24 @@ function clearMatches() {
 }
 
 
+function setup(app) {
+    function * get(next) {
+        this.body.matches = exports.getMatches();
+        yield next;
+    }
+
+    function * post(next) {
+        this.body.match  = exports.createMatch();
+        this.body.matches = exports.getMatches();
+        yield next;
+    }
+
+    app.route('/match')
+        .get(get)
+        .post(post);
+}
+
+exports.setup = setup;
 exports.getMatches = getMatches;
 exports.createMatch = createMatch;
 exports.clearMatches = clearMatches;

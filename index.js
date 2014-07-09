@@ -15,12 +15,15 @@ app.use(function * (next) {
 app.use(routing(app));
 app.use(koaBody());
 
-// Setup apis
-var apiPath = './routes';
+// Setup modules
+var apiPath = './modules';
 var files = fs.readdirSync(apiPath);
+
 files.forEach(function (file) {
-    if (file.indexOf('.swp') === -1) {
-        require(apiPath + '/' + file).setup(app);
+    var module = require(apiPath + '/' + file);
+
+    if (typeof module.setup === 'function') {
+        module.setup(app);
     }
 });
 
